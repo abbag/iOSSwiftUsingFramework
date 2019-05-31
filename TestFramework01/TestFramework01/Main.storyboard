@@ -13,14 +13,29 @@
         <!--TestFramework01 - Main-->
         <scene sceneID="HRD-TD-iKf">
             <objects>
-                <viewController id="wSm-cw-Atc" sceneMemberID="viewController">
+                <viewController id="wSm-cw-Atc" customClass="MainViewController" customModule="TestFramework01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UjX-Us-b6v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w73-hv-Odu">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w73-hv-Odu" firstAttribute="centerY" secondItem="UjX-Us-b6v" secondAttribute="centerY" id="9zl-jU-2lb"/>
+                            <constraint firstItem="w73-hv-Odu" firstAttribute="centerX" secondItem="UjX-Us-b6v" secondAttribute="centerX" id="xH2-5o-usx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YHi-Oy-Vpd"/>
                     </view>
                     <navigationItem key="navigationItem" title="TestFramework01 - Main" prompt="Welcome to" id="got-CC-Gqj"/>
+                    <connections>
+                        <outlet property="mLblStatus" destination="w73-hv-Odu" id="Bcg-wD-PcP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZO-ZX-vSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

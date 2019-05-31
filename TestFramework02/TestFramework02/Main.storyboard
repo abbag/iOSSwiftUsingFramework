@@ -13,14 +13,29 @@
         <!--TestFramework02 - Main-->
         <scene sceneID="tGZ-WY-ktO">
             <objects>
-                <viewController id="Rc3-mm-LHP" sceneMemberID="viewController">
+                <viewController id="Rc3-mm-LHP" customClass="MainViewController" customModule="TestFramework02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0za-Qi-X1d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-nn-k87">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MeF-nn-k87" firstAttribute="centerY" secondItem="0za-Qi-X1d" secondAttribute="centerY" id="7FC-1l-Ufo"/>
+                            <constraint firstItem="MeF-nn-k87" firstAttribute="centerX" secondItem="0za-Qi-X1d" secondAttribute="centerX" id="W9P-ft-ViN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7sQ-qu-FoM"/>
                     </view>
                     <navigationItem key="navigationItem" title="TestFramework02 - Main" prompt="Welcome to" id="cF3-fw-qLf"/>
+                    <connections>
+                        <outlet property="mLblStatus" destination="MeF-nn-k87" id="kTH-f2-1HT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6K-9U-9YJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

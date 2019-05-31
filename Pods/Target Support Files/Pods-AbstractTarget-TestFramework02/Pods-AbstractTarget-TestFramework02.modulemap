@@ -1,0 +1,6 @@
+framework module Pods_AbstractTarget_TestFramework02 {
+  umbrella header "Pods-AbstractTarget-TestFramework02-umbrella.h"
+
+  export *
+  module * { export * }
+}
