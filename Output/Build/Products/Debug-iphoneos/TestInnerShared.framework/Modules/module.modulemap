@@ -1,0 +1,11 @@
+framework module TestInnerShared {
+  umbrella header "TestInnerShared.h"
+
+  export *
+  module * { export * }
+}
+
+module TestInnerShared.Swift {
+    header "TestInnerShared-Swift.h"
+    requires objc
+}

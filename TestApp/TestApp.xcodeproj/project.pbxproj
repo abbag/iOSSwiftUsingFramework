@@ -19,6 +19,8 @@
 		94C0C7A422A111C4002A1610 /* TestFramework01.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7A222A111C4002A1610 /* TestFramework01.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94C0C7A722A111C8002A1610 /* TestFramework02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7A622A111C8002A1610 /* TestFramework02.framework */; };
 		94C0C7A822A111C8002A1610 /* TestFramework02.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7A622A111C8002A1610 /* TestFramework02.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94C0C7D822A125A0002A1610 /* TestInnerShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7D722A125A0002A1610 /* TestInnerShared.framework */; };
+		94C0C7D922A125A0002A1610 /* TestInnerShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7D722A125A0002A1610 /* TestInnerShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				94C0C7D922A125A0002A1610 /* TestInnerShared.framework in Embed Frameworks */,
 				94C0C7A422A111C4002A1610 /* TestFramework01.framework in Embed Frameworks */,
 				94C0C7A822A111C8002A1610 /* TestFramework02.framework in Embed Frameworks */,
 			);
@@ -69,6 +72,7 @@
 		94C0C72622A10C06002A1610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C0C7A222A111C4002A1610 /* TestFramework01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestFramework01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C0C7A622A111C8002A1610 /* TestFramework02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestFramework02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C0C7D722A125A0002A1610 /* TestInnerShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestInnerShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8DC7D3967782CB33BF49EC /* Pods-AbstractTarget-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbstractTarget-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-AbstractTarget-TestApp/Pods-AbstractTarget-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EBA1FCBA3C0350F4CC325410 /* Pods_AbstractTarget_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AbstractTarget_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F488D647D44B2F4F89B05916 /* Pods-AbstractTarget-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbstractTarget-TestApp.release.xcconfig"; path = "Target Support Files/Pods-AbstractTarget-TestApp/Pods-AbstractTarget-TestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C0C7D822A125A0002A1610 /* TestInnerShared.framework in Frameworks */,
 				94C0C7A322A111C4002A1610 /* TestFramework01.framework in Frameworks */,
 				94C0C7A722A111C8002A1610 /* TestFramework02.framework in Frameworks */,
 				5216A68EF9E3270111A55EA5 /* Pods_AbstractTarget_TestApp.framework in Frameworks */,
@@ -115,6 +120,7 @@
 		94C0C6F822A10C04002A1610 = {
 			isa = PBXGroup;
 			children = (
+				94C0C7D722A125A0002A1610 /* TestInnerShared.framework */,
 				94C0C7A622A111C8002A1610 /* TestFramework02.framework */,
 				94C0C7A222A111C4002A1610 /* TestFramework01.framework */,
 				94C0C70322A10C04002A1610 /* TestApp */,

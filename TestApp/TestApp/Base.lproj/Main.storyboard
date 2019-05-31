@@ -32,8 +32,8 @@
                                     <segue destination="4WS-zM-fOF" kind="show" id="cOm-ty-bY7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-nu-ZOC">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-nu-ZOC">
+                                <rect key="frame" x="186" y="438" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,18 +41,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JvB-nu-ZOC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DWB-1e-glx"/>
                             <constraint firstItem="0RT-CT-G5J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NUp-2q-Uoy"/>
                             <constraint firstItem="JvB-nu-ZOC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ie0-Xb-Rg8"/>
                             <constraint firstItem="0RT-CT-G5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="kQ4-Nq-mtJ"/>
                             <constraint firstItem="iA3-Wi-INz" firstAttribute="top" secondItem="0RT-CT-G5J" secondAttribute="bottom" constant="30" id="teZ-iF-MkC"/>
                             <constraint firstItem="iA3-Wi-INz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u2O-ss-LYT"/>
-                            <constraint firstItem="JvB-nu-ZOC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zwn-qB-K1m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="TestApp" prompt="Welcome to" id="mvX-Hw-GJc"/>
                     <connections>
-                        <outlet property="mLblStatus" destination="JvB-nu-ZOC" id="Nnt-bp-Q3b"/>
+                        <outlet property="mLblStatus" destination="JvB-nu-ZOC" id="Tro-BQ-OPq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

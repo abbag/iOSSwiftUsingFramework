@@ -8,6 +8,7 @@
 
 import UIKit
 import CocoaAsyncSocket
+import TestInnerShared
 
 class MainViewController: UIViewController {
 
@@ -20,7 +21,8 @@ class MainViewController: UIViewController {
         
         _ = GCDAsyncSocket(delegate: nil, delegateQueue: DispatchQueue.main)
         
-        mLblStatus.text = "GCDAsyncSocket() done."
+        mLblStatus.text = "GCDAsyncSocket() done.\n"
+        mLblStatus.text!.append(TestInnerShared.TestClass.getTestString() + "\n")
     }
     
 

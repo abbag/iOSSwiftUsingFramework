@@ -8,9 +8,10 @@
 
 import UIKit
 import CocoaAsyncSocket
+import TestInnerShared
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var mLblStatus: UILabel!
     
     override func viewDidLoad() {
@@ -19,7 +20,8 @@ class ViewController: UIViewController {
         
         _ = GCDAsyncSocket(delegate: nil, delegateQueue: DispatchQueue.main)
         
-        mLblStatus.text = "GCDAsyncSocket() done."
+        mLblStatus.text = "GCDAsyncSocket() done.\n"
+        mLblStatus.text!.append(TestInnerShared.TestClass.getTestString() + "\n")
     }
 }
 
