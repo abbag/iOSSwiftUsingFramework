@@ -9,6 +9,8 @@
 import UIKit
 import CocoaAsyncSocket
 import TestInnerShared
+import HomerHelper
+import DependOnHomerHelper
 
 class ViewController: UIViewController {
     
@@ -19,9 +21,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         _ = GCDAsyncSocket(delegate: nil, delegateQueue: DispatchQueue.main)
-        
         mLblStatus.text = "GCDAsyncSocket() done.\n"
+        
+        mLblStatus.text!.append("TestInnerSharedVersionNumber = \(TestInnerSharedVersionNumber)\n")
         mLblStatus.text!.append(TestInnerShared.TestClass.getTestString() + "\n")
+        
+        mLblStatus.text!.append("HHVerNum = \(HomerHelperVersionNumber)\n")
+        mLblStatus.text!.append("DependHH.TestString = \(DependOnHomerHelper.TestClass.getTestString())\n")
     }
 }
-

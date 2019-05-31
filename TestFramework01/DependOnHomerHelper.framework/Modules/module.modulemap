@@ -1,0 +1,11 @@
+framework module DependOnHomerHelper {
+  umbrella header "DependOnHomerHelper.h"
+
+  export *
+  module * { export * }
+}
+
+module DependOnHomerHelper.Swift {
+    header "DependOnHomerHelper-Swift.h"
+    requires objc
+}

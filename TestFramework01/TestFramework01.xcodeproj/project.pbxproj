@@ -13,6 +13,8 @@
 		94C0C74D22A10C85002A1610 /* TestFramework01.h in Headers */ = {isa = PBXBuildFile; fileRef = 94C0C73F22A10C85002A1610 /* TestFramework01.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94C0C7A122A11050002A1610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94C0C7A022A11050002A1610 /* Main.storyboard */; };
 		94C0C7B022A11775002A1610 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C0C7AF22A11775002A1610 /* MainViewController.swift */; };
+		94C0C80422A15522002A1610 /* HomerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C80322A15522002A1610 /* HomerHelper.framework */; };
+		94C0C80C22A156AF002A1610 /* DependOnHomerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C80B22A156AF002A1610 /* DependOnHomerHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		94C0C74C22A10C85002A1610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C0C7A022A11050002A1610 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		94C0C7AF22A11775002A1610 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		94C0C80322A15522002A1610 /* HomerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HomerHelper.framework; sourceTree = "<group>"; };
+		94C0C80B22A156AF002A1610 /* DependOnHomerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DependOnHomerHelper.framework; sourceTree = "<group>"; };
 		E59F8DF26F71DCF2CB93AC92 /* Pods-AbstractTarget-TestFramework01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbstractTarget-TestFramework01.release.xcconfig"; path = "Target Support Files/Pods-AbstractTarget-TestFramework01/Pods-AbstractTarget-TestFramework01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C0C80C22A156AF002A1610 /* DependOnHomerHelper.framework in Frameworks */,
+				94C0C80422A15522002A1610 /* HomerHelper.framework in Frameworks */,
 				35284330C5BADD7B267E7BEC /* Pods_AbstractTarget_TestFramework01.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +118,8 @@
 		9FC8E9BB6F688C675D8B8BF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94C0C80B22A156AF002A1610 /* DependOnHomerHelper.framework */,
+				94C0C80322A15522002A1610 /* HomerHelper.framework */,
 				7F8ADB4E0A6602D692B798E3 /* Pods_AbstractTarget_TestFramework01.framework */,
 			);
 			name = Frameworks;
@@ -410,6 +418,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestFramework01/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +450,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestFramework01/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

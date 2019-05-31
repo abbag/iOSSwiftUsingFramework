@@ -1,0 +1,11 @@
+framework module HomerHelper {
+  umbrella header "HomerHelper.h"
+
+  export *
+  module * { export * }
+}
+
+module HomerHelper.Swift {
+    header "HomerHelper-Swift.h"
+    requires objc
+}

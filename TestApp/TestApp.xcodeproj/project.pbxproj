@@ -21,6 +21,10 @@
 		94C0C7A822A111C8002A1610 /* TestFramework02.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7A622A111C8002A1610 /* TestFramework02.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94C0C7D822A125A0002A1610 /* TestInnerShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7D722A125A0002A1610 /* TestInnerShared.framework */; };
 		94C0C7D922A125A0002A1610 /* TestInnerShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C7D722A125A0002A1610 /* TestInnerShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94C0C80922A15612002A1610 /* HomerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C80522A155B9002A1610 /* HomerHelper.framework */; };
+		94C0C80A22A15612002A1610 /* HomerHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C80522A155B9002A1610 /* HomerHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94C0C80F22A15736002A1610 /* DependOnHomerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C80D22A156B8002A1610 /* DependOnHomerHelper.framework */; };
+		94C0C81022A15736002A1610 /* DependOnHomerHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94C0C80D22A156B8002A1610 /* DependOnHomerHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +51,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				94C0C80A22A15612002A1610 /* HomerHelper.framework in Embed Frameworks */,
 				94C0C7D922A125A0002A1610 /* TestInnerShared.framework in Embed Frameworks */,
 				94C0C7A422A111C4002A1610 /* TestFramework01.framework in Embed Frameworks */,
+				94C0C81022A15736002A1610 /* DependOnHomerHelper.framework in Embed Frameworks */,
 				94C0C7A822A111C8002A1610 /* TestFramework02.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -73,6 +79,8 @@
 		94C0C7A222A111C4002A1610 /* TestFramework01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestFramework01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C0C7A622A111C8002A1610 /* TestFramework02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestFramework02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C0C7D722A125A0002A1610 /* TestInnerShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TestInnerShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C0C80522A155B9002A1610 /* HomerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HomerHelper.framework; sourceTree = "<group>"; };
+		94C0C80D22A156B8002A1610 /* DependOnHomerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DependOnHomerHelper.framework; sourceTree = "<group>"; };
 		BC8DC7D3967782CB33BF49EC /* Pods-AbstractTarget-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbstractTarget-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-AbstractTarget-TestApp/Pods-AbstractTarget-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EBA1FCBA3C0350F4CC325410 /* Pods_AbstractTarget_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AbstractTarget_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F488D647D44B2F4F89B05916 /* Pods-AbstractTarget-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AbstractTarget-TestApp.release.xcconfig"; path = "Target Support Files/Pods-AbstractTarget-TestApp/Pods-AbstractTarget-TestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +94,9 @@
 				94C0C7D822A125A0002A1610 /* TestInnerShared.framework in Frameworks */,
 				94C0C7A322A111C4002A1610 /* TestFramework01.framework in Frameworks */,
 				94C0C7A722A111C8002A1610 /* TestFramework02.framework in Frameworks */,
+				94C0C80F22A15736002A1610 /* DependOnHomerHelper.framework in Frameworks */,
 				5216A68EF9E3270111A55EA5 /* Pods_AbstractTarget_TestApp.framework in Frameworks */,
+				94C0C80922A15612002A1610 /* HomerHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +186,8 @@
 		B3572A85819A5614314621B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94C0C80D22A156B8002A1610 /* DependOnHomerHelper.framework */,
+				94C0C80522A155B9002A1610 /* HomerHelper.framework */,
 				EBA1FCBA3C0350F4CC325410 /* Pods_AbstractTarget_TestApp.framework */,
 			);
 			name = Frameworks;
@@ -541,6 +553,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B277ZQWBVA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,6 +576,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B277ZQWBVA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
