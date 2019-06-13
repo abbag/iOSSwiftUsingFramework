@@ -166,6 +166,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreBluetooth;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -184,6 +186,33 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class CBCentralManager;
+@class CBPeripheral;
+@class NSNumber;
+
+SWIFT_CLASS("_TtC11HomerHelper16BluetoothScanner")
+@interface BluetoothScanner : NSObject <CBCentralManagerDelegate>
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
+- (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didConnectPeripheral:(CBPeripheral * _Nonnull)peripheral;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didFailToConnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
+- (void)centralManager:(CBCentralManager * _Nonnull)central didDisconnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
+@end
+
+
+SWIFT_PROTOCOL("_TtP11HomerHelper24BluetoothScannerDelegate_")
+@protocol BluetoothScannerDelegate
+@optional
+- (void)didStopScan;
+- (void)didDiscovered:(CBCentralManager * _Nonnull)central didDiscover:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData rssi:(NSNumber * _Nonnull)RSSI;
+- (void)didConnect:(CBCentralManager * _Nonnull)central didConnect:(CBPeripheral * _Nonnull)peripheral;
+- (void)didFailToConnect:(CBCentralManager * _Nonnull)central didFailToConnect:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
+- (void)didDisconnect:(CBCentralManager * _Nonnull)central didDisconnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
+@end
+
 @class NSBundle;
 @class NSCoder;
 
@@ -195,11 +224,13 @@ SWIFT_CLASS("_TtC11HomerHelper22BusyMaskViewController")
 @end
 
 
-SWIFT_PROTOCOL("_TtP11HomerHelper27ExtensionNavigationDelegate_")
-@protocol ExtensionNavigationDelegate
+SWIFT_PROTOCOL("_TtP11HomerHelper18NavigationDelegate_")
+@protocol NavigationDelegate
 @optional
 - (void)willPopBackFrom:(UIViewController * _Nonnull)from;
 @end
+
+
 
 
 

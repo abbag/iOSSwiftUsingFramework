@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         mLblStatus.text!.append("TestInnerSharedVersionNumber = \(TestInnerSharedVersionNumber)\n")
         mLblStatus.text!.append(TestInnerShared.TestClass.getTestString() + "\n")
         
-        mLblStatus.text!.append("HHVerNum = \(HomerHelperVersionNumber)\n")
+        mLblStatus.text!.append("HHVerNum = \(HomerHelperVersionNumber), \"\(HomerHelper.Common.getVersion() ?? "(nil)")\"\n")
         mLblStatus.text!.append("DependHH.TestString = \(DependOnHomerHelper.TestClass.getTestString())\n")
     }
     
